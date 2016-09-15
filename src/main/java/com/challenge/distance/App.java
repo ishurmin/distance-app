@@ -73,8 +73,9 @@ public class App
             // меняем индексы и вектора в паре местами
             .mapToPair(
                 pair -> new Tuple2<>(pair._2(), pair._1())
+            )
             // кешируем RDD, т.к. еще будем использовать для поиска нужного вектора
-            ).cache();
+            .cache();
 
         // создаем вектор X
         final Broadcast<Vector> x = jsc.broadcast(Vectors.dense(createRandomArray(vectorSize)));
