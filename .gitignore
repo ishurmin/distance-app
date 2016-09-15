@@ -1,4 +1,4 @@
 .idea
-target
+target/*
 !target/distance-app-1.0-SNAPSHOT.jar
 distance-app.iml
